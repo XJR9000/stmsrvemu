@@ -1409,6 +1409,8 @@ def auto_neuter(param1, param2, param3):
     app_id = None
     app_ver = None
 
+    config = get_config() # in case of auto IP change
+
     #create folders
     for directory in [config["storagedir"], config["manifestdir"]]:
         try:

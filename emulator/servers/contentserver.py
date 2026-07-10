@@ -99,7 +99,7 @@ class contentserver(TCPNetworkHandler):
         }
 
         def run_latency_checker():
-            checker = latencychecker(int(self.config["ping_server_port"]))
+            checker = latencychecker(globalvars.server_ip, int(self.config["ping_server_port"]))
             checker.start()
 
         # Start latency checking thread for improved load balancing and better server selection for client
